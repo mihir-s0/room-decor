@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input[type="file"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#recommendations {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.product-card {
+    background: #fff;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33% - 60px);
+    box-sizing: border-box;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.product-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #337ab7;
+    text-decoration: none;
+}
