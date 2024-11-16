@@ -2,29 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room Decor App</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Room Decor App</h1>
-    <form id="upload-form">
-        <label for="room-images">Upload Room Snapshots:</label>
-        <input type="file" id="room-images" name="room-images" accept="image/*" multiple required>
-        
-        <label for="theme-select">Select a Theme:</label>
-        <select id="theme-select" name="theme-select" required>
-            <option value="">--Choose a Theme--</option>
-            <option value="modern">Modern</option>
-            <option value="rustic">Rustic</option>
-            <option value="scandinavian">Scandinavian</option>
-            <option value="bohemian">Bohemian</option>
-        </select>
-        
-        <button type="submit">Get Recommendations</button>
-    </form>
+    <header>
+        <div>
+            <img src="static/logo.png" alt="Room Decor Logo">
+            <h1>Room Decor App</h1>
+        </div>
+    </header>
 
-    <div id="recommendations"></div>
+    <div class="container">
+        <form id="upload-form">
+            <label for="room-images">Upload Room Snapshots:</label>
+            <input type="file" id="room-images" name="room-images" accept="image/*" multiple required>
+            
+            <label for="theme-select">Select a Theme:</label>
+            <select id="theme-select" name="theme-select" required>
+                <option value="">--Choose a Theme--</option>
+                <option value="modern">Modern</option>
+                <option value="rustic">Rustic</option>
+                <option value="scandinavian">Scandinavian</option>
+                <option value="bohemian">Bohemian</option>
+            </select>
+            
+            <button type="submit">Get Recommendations</button>
+        </form>
+
+        <div id="recommendations">
+            <!-- Recommendations will be dynamically inserted here -->
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
 </html>
+

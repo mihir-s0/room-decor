@@ -1,58 +1,98 @@
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
-h1 {
-    text-align: center;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+header img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Form Styles */
 form {
-    max-width: 500px;
-    margin: 0 auto;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
     margin-top: 15px;
+    font-weight: 500;
 }
 
 input[type="file"],
-select {
+select,
+button {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 button {
-    margin-top: 20px;
-    padding: 10px;
-    width: 100%;
     background-color: #5cb85c;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Recommendations Grid */
 #recommendations {
-    max-width: 800px;
-    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
 }
 
 .product-card {
     background: #fff;
     padding: 15px;
-    margin: 15px;
     border-radius: 8px;
-    display: inline-block;
-    vertical-align: top;
-    width: calc(33% - 60px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 20px);
     box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
 }
 
 .product-card img {
@@ -61,13 +101,24 @@ button {
 }
 
 .product-card h3 {
-    margin-top: 10px;
-    font-size: 1.1em;
+    margin: 10px 0;
+    font-size: 1.1rem;
 }
 
 .product-card a {
-    display: inline-block;
-    margin-top: 10px;
     color: #337ab7;
     text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 1 1 100%;
+    }
 }
